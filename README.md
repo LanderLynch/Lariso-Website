@@ -94,6 +94,9 @@ Berdasarkan guideline resmi Lariso:
    - OVO
    - BCA
 8. **Hapus badge pengiriman** — "3-5 Days Delivery" dan "Free Shipping over £40" dihapus.
+9. **Perbaiki aksesibilitas warna** — teks plum di atas background merah diganti putih (hero paragraph & statement card), subline produk di atas cream diganti plum agar kontrasnya lolos WCAG.
+10. **Perbaiki posisi logo** — logo Lariso di tabel perbandingan benefits sekarang sejajar (bottom-aligned) dengan teks "Keripik Biasa".
+11. **Tambah popup Changelog** — di footer dekat "Site Credits" ada tombol "Changelog" yang memunculkan popup animasi berisi riwayat perubahan (scrollable), otomatis tertutup saat klik di luar box.
 
 ---
 
