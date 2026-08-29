@@ -194,6 +194,262 @@
         filter: drop-shadow(0 0 0 transparent);
       }
 
+      /* ---- Lariso 3-pack fanned final stage (replacing cookie/strawberry) ---- */
+      .sequence-final {
+        justify-content: center !important;
+        overflow: visible !important;
+      }
+
+      .sequence-final .sequence-title {
+        margin-bottom: 0 !important;
+        margin-top: 1.5em;
+      }
+
+      .sequence-final-pack {
+        position: absolute;
+        bottom: 0.5em;
+        width: 12.5em;
+        will-change: transform;
+      }
+
+      .sequence-final-pack-img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        filter: drop-shadow(0 1.25em 1.5em rgba(38, 70, 47, 0.18)) !important;
+        will-change: transform;
+      }
+
+      .sequence-final-pack.is-jagung {
+        left: 50%;
+        margin-left: -25.5em;
+        transform: rotate(-10deg);
+        z-index: 1;
+      }
+
+      .sequence-final-pack.is-balado {
+        left: 50%;
+        margin-left: -7em;
+        transform: rotate(0deg);
+        z-index: 3;
+        width: 15.625em;
+      }
+
+      .sequence-final-pack.is-keju {
+        left: 50%;
+        margin-left: 12.5em;
+        transform: rotate(10deg);
+        z-index: 2;
+      }
+
+      /* ---- Lariso 3-pack mobile final stage ---- */
+      .sequence-final-packs-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin-top: 3em;
+        position: relative;
+        min-height: 24em;
+      }
+
+      .sequence-final-pack-mobile {
+        width: 9.5em;
+        height: auto;
+        object-fit: contain;
+        filter: drop-shadow(0 1em 1.25em rgba(38, 70, 47, 0.18));
+      }
+
+      .sequence-final-pack-mobile.is-jagung-mobile {
+        transform: rotate(-10deg);
+        margin-right: -2em;
+        z-index: 1;
+      }
+
+      .sequence-final-pack-mobile.is-balado-mobile {
+        width: 11em;
+        transform: rotate(0deg);
+        z-index: 3;
+      }
+
+      .sequence-final-pack-mobile.is-keju-mobile {
+        transform: rotate(10deg);
+        margin-left: -2em;
+        z-index: 2;
+      }
+
+      @media screen and (max-width: 479px) {
+        .sequence-final-packs-mobile {
+          margin-top: 2.5em;
+          min-height: 20em;
+        }
+        .sequence-final-pack-mobile {
+          width: 8em;
+        }
+        .sequence-final-pack-mobile.is-balado-mobile {
+          width: 9.5em;
+        }
+        .sequence-final-pack-mobile.is-jagung-mobile {
+          margin-right: -1.5em;
+        }
+        .sequence-final-pack-mobile.is-keju-mobile {
+          margin-left: -1.5em;
+        }
+      }
+
+      /* ---- Payment methods: clean arc layout for 5 logos (all breakpoints) ---- */
+      .payment-methods-inner {
+        height: 22em !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+      }
+
+      .pament-methods {
+        position: relative !important;
+        display: flex !important;
+        flex-flow: row nowrap !important;
+        justify-content: center !important;
+        align-items: flex-end !important;
+        gap: 1.25em !important;
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+      .payment-method-item-outer {
+        display: block !important;
+        width: auto !important;
+      }
+
+      .payment-method-item {
+        position: relative !important;
+        width: 10.5em !important;
+        height: 10.5em !important;
+        left: auto !important;
+        right: auto !important;
+        margin: 0 !important;
+      }
+
+      .payment-method-item._1 {
+        bottom: 0 !important;
+      }
+      .payment-method-item._2 {
+        bottom: 3.5em !important;
+      }
+      .payment-method-item._3 {
+        bottom: 6.5em !important;
+      }
+      .payment-method-item._4 {
+        bottom: 3.5em !important;
+      }
+      .payment-method-item._5 {
+        bottom: 0 !important;
+      }
+
+      @media screen and (max-width: 767px) {
+        /* Remove blank sticky stage + huge gaps on mobile (canvas has no frames) */
+        .sequence-sticky {
+          display: none !important;
+        }
+        .sequence-cards-mobile {
+          margin-top: 0 !important;
+          padding-top: 3em !important;
+          grid-row-gap: 5em !important;
+        }
+
+        .sequence-final-pack {
+          width: 9.5em;
+        }
+        .sequence-final-pack.is-balado {
+          width: 11.5em;
+        }
+        .sequence-final-pack.is-jagung {
+          margin-left: -19.5em;
+        }
+        .sequence-final-pack.is-keju {
+          margin-left: 9.5em;
+        }
+
+        /* Benefit table header on mobile: Benefits | Lariso(mobile) | Keripik Biasa */
+        #w-node-d5a0031d-8b6e-5d4a-5e75-e26d1c40acd5-0ac01850 {
+          /* Lariso logo (desktop) hidden on mobile */
+          display: none !important;
+        }
+
+        #w-node-_2d859f91-413d-fec0-5be3-c31abf68249b-0ac01850 {
+          /* Lariso logo (mobile) above the checkmark column */
+          display: block !important;
+          grid-column: 2 !important;
+          grid-area: auto !important;
+          place-self: end center !important;
+        }
+
+        /* Payment methods: 2-row compact arc for small screens */
+        .payment-methods-inner {
+          height: 21em !important;
+        }
+        .pament-methods {
+          flex-flow: row wrap !important;
+          justify-content: center !important;
+          align-items: flex-end !important;
+          gap: 0.75em 1.5em !important;
+          height: 100% !important;
+        }
+        .payment-method-item-outer {
+          order: 5;
+        }
+        .payment-method-item-outer:nth-child(1) {
+          /* DANA -> bottom-left */
+          order: 4;
+        }
+        .payment-method-item-outer:nth-child(2) {
+          /* GoPay -> top-left */
+          order: 1;
+        }
+        .payment-method-item-outer:nth-child(3) {
+          /* ShopeePay -> top-center */
+          order: 2;
+        }
+        .payment-method-item-outer:nth-child(4) {
+          /* OVO -> top-right */
+          order: 3;
+        }
+        .payment-method-item-outer:nth-child(5) {
+          /* BCA -> bottom-right */
+          order: 5;
+        }
+        .payment-method-item {
+          width: 7.5em !important;
+          height: 7.5em !important;
+        }
+        .payment-method-item._1,
+        .payment-method-item._5 {
+          bottom: 0 !important;
+        }
+        .payment-method-item._2,
+        .payment-method-item._3,
+        .payment-method-item._4 {
+          bottom: 0 !important;
+        }
+        .payment-method-img {
+          width: 4.5em !important;
+        }
+        .payment-method-img.is-dana {
+          width: 4.125em !important;
+        }
+        .payment-method-img.is-gopay {
+          width: 4.625em !important;
+        }
+        .payment-method-img.is-shopeepay {
+          width: 3.75em !important;
+        }
+        .payment-method-img.is-ovo {
+          width: 2.75em !important;
+        }
+        .payment-method-img.is-bca {
+          width: 4.25em !important;
+        }
+      }
+
       /* Lariso logo replacing more-m-logo in benefit table */
       .benefit-table-title-img.is-desktop {
         width: auto !important;
@@ -212,6 +468,34 @@
       .benefit-table-title-wrapper {
         align-items: end !important;
         grid-template-columns: minmax(0, 1fr) 9em 4em !important;
+      }
+
+      /* Force header cells to sit above the right columns: Benefits | Lariso | Keripik Biasa */
+      #w-node-da33aad3-e9be-fd6f-a8b0-79237ed37994-0ac01850 {
+        /* "Benefits" label */
+        grid-column: 1 !important;
+        grid-area: auto !important;
+        align-self: end !important;
+      }
+
+      #w-node-d5a0031d-8b6e-5d4a-5e75-e26d1c40acd5-0ac01850 {
+        /* Lariso logo (desktop) above the checkmark column */
+        grid-column: 2 !important;
+        grid-area: auto !important;
+        place-self: end center !important;
+        display: block !important;
+      }
+
+      #w-node-_2d859f91-413d-fec0-5be3-c31abf68249b-0ac01850 {
+        /* Lariso logo (mobile) hidden on desktop */
+        display: none !important;
+      }
+
+      #w-node-_78d70ec8-c380-1f74-9296-fa312e5af0f4-0ac01850 {
+        /* "Keripik Biasa" label above the X column */
+        grid-column: 3 !important;
+        grid-area: auto !important;
+        place-self: end center !important;
       }
 
       .benefit-checker-inner {
@@ -1071,40 +1355,6 @@
         </div>
       </div>
       <div id="nutrition" data-sequence="" class="sequence-section">
-        <div class="sequence-signature">
-          <div class="sequence-signature-text">
-            <img
-              loading="lazy"
-              width="300"
-              height="104"
-              alt="sequence-why-people-love-it"
-              class="sequence-signature-text-img"
-            /><img
-              loading="lazy"
-              width="300"
-              height="104"
-              alt="sequence-why-people-love-it"
-              class="sequence-signature-text-img is-wiggle"
-            />
-          </div>
-          <div class="sequence-signature-arrow">
-            <img
-              src="assets/68b9b2bfdc8daf0458376a72_sequence-why-people-arrow-29aae2.svg"
-              loading="lazy"
-              width="150"
-              height="150"
-              alt="sequence-why-people-arrow"
-              class="sequence-signature-arrow-img"
-            /><img
-              src="assets/68b9b2bfdc8daf0458376a72_sequence-why-people-arrow-29aae2.svg"
-              loading="lazy"
-              width="150"
-              height="150"
-              alt="sequence-why-people-arrow"
-              class="sequence-signature-arrow-img is-wiggle"
-            />
-          </div>
-        </div>
         <div data-sequence-trigger="" class="sequence-scroll-wrap">
           <div data-sequence-stage="" class="sequence-sticky">
             <canvas
@@ -1268,122 +1518,39 @@
                   >Pilih varianmu?</span
                 ><br />
               </h2>
-              <div
-                style="--animation-delay: 0.05s"
-                data-sequence-final-signature=""
-                class="sequence-final-signature"
-              >
+              <div class="sequence-final-pack is-jagung">
                 <img
-                  src="assets/68bb4a56d6965dfedaaf9bbb_sequence-vanilla-crumble-5e15fd.svg"
+                  src="assets/lariso-package/jagung-bakar.png"
                   loading="lazy"
-                  width="285"
-                  height="150"
-                  alt="sequence-vanilla-crumble"
-                  class="sequence-final-signature-img"
-                /><img
-                  src="assets/68bb4a56d6965dfedaaf9bbb_sequence-vanilla-crumble-5e15fd.svg"
-                  loading="lazy"
-                  width="285"
-                  height="150"
-                  alt="sequence-vanilla-crumble"
-                  class="sequence-final-signature-img is-wiggle"
+                  width="761"
+                  height="1137"
+                  alt="Keripik Tempe Sagu Jagung Bakar - Lariso"
+                  data-sequence-cookie-first=""
+                  class="sequence-final-pack-img"
                 />
               </div>
-              <div
-                data-sequence-final-signature=""
-                class="sequence-final-signature is-first-arrow"
-              >
+              <div class="sequence-final-pack is-balado">
                 <img
-                  src="assets/68bb4d0addb7dabb6793ee05_sequence-vanilla-crumble-arrow-038679.svg"
+                  src="assets/lariso-package/balado-pedas.png"
                   loading="lazy"
-                  width="300"
-                  height="92"
-                  alt="sequence-vanilla-crumble-arrow"
-                  class="sequence-final-signature-img"
-                /><img
-                  src="assets/68bb4d0addb7dabb6793ee05_sequence-vanilla-crumble-arrow-038679.svg"
-                  loading="lazy"
-                  width="300"
-                  height="92"
-                  alt="sequence-vanilla-crumble-arrow"
-                  class="sequence-final-signature-img is-wiggle"
+                  width="771"
+                  height="1152"
+                  alt="Keripik Tempe Sagu Balado Pedas - Lariso"
+                  data-sequence-strawberry-first=""
+                  class="sequence-final-pack-img"
                 />
               </div>
-              <div
-                style="--animation-delay: 0.075s"
-                data-sequence-final-signature=""
-                class="sequence-final-signature is-second"
-              >
+              <div class="sequence-final-pack is-keju">
                 <img
-                  src="assets/68bb4ef605d3c803020c0a8c_sequence-strawberry-cheesecake-95a0e4.svg"
+                  src="assets/lariso-package/keju-gurih.png"
                   loading="lazy"
-                  width="300"
-                  height="125"
-                  alt="sequence-strawberry-cheesecake"
-                  class="sequence-final-signature-img"
-                /><img
-                  src="assets/68bb4ef605d3c803020c0a8c_sequence-strawberry-cheesecake-95a0e4.svg"
-                  loading="lazy"
-                  width="300"
-                  height="125"
-                  alt="sequence-strawberry-cheesecake"
-                  class="sequence-final-signature-img is-wiggle"
+                  width="771"
+                  height="1152"
+                  alt="Keripik Tempe Sagu Keju Gurih - Lariso"
+                  data-sequence-cookie-second=""
+                  class="sequence-final-pack-img"
                 />
               </div>
-              <div
-                style="--animation-delay: 0.025s"
-                data-sequence-final-signature=""
-                class="sequence-final-signature is-second-arrow"
-              >
-                <img
-                  src="assets/68bb51400be6f0687f9cb522_sequence-strawberry-cheesecake-arrow-f14cec.svg"
-                  loading="lazy"
-                  width="153"
-                  height="150"
-                  alt="sequence-strawberry-cheesecake-arrow"
-                  class="sequence-final-signature-img"
-                /><img
-                  src="assets/68bb51400be6f0687f9cb522_sequence-strawberry-cheesecake-arrow-f14cec.svg"
-                  loading="lazy"
-                  width="153"
-                  height="150"
-                  alt="sequence-strawberry-cheesecake-arrow"
-                  class="sequence-final-signature-img is-wiggle"
-                />
-              </div>
-              <img
-                src="assets/68bb559a04860444181393aa_sequence-cookie-dd0ea2.webp"
-                loading="lazy"
-                width="340"
-                height="344"
-                alt="sequence-cookie"
-                data-sequence-cookie-first=""
-                class="sequence-final-cookie"
-              /><img
-                src="assets/68bb559a04860444181393aa_sequence-cookie-dd0ea2.webp"
-                loading="lazy"
-                width="340"
-                height="344"
-                alt="sequence-cookie"
-                data-sequence-cookie-second=""
-                class="sequence-final-cookie is-second"
-              /><img
-                src="assets/68bb559a1333de45c53ee927_sequence-strawberry-b01cbb.webp"
-                loading="lazy"
-                width="594"
-                height="594"
-                alt="sequence-strawberry"
-                data-sequence-strawberry-first=""
-                class="sequence-final-strawberry"
-              /><img
-                src="assets/68bb559a1333de45c53ee927_sequence-strawberry-b01cbb.webp"
-                loading="lazy"
-                width="594"
-                height="594"
-                alt="sequence-strawberry"
-                data-sequence-strawberry-second=""
-                class="sequence-final-strawberry is-second"
-              />
             </div>
             <div class="sequence-lines">
               <svg
@@ -1580,81 +1747,28 @@
                   >Pilih varianmu?</span
                 ><br />
               </h2>
-              <div
-                style="--animation-delay: 0.05s"
-                class="sequence-final-signature"
-              >
+              <div class="sequence-final-packs-mobile">
                 <img
-                  src="assets/68bb4a56d6965dfedaaf9bbb_sequence-vanilla-crumble-5e15fd.svg"
+                  src="assets/lariso-package/jagung-bakar.png"
                   loading="lazy"
-                  width="285"
-                  height="150"
-                  alt="sequence-vanilla-crumble"
-                  class="sequence-final-signature-img"
+                  width="761"
+                  height="1137"
+                  alt="Keripik Tempe Sagu Jagung Bakar - Lariso"
+                  class="sequence-final-pack-mobile is-jagung-mobile"
                 /><img
-                  src="assets/68bb4a56d6965dfedaaf9bbb_sequence-vanilla-crumble-5e15fd.svg"
+                  src="assets/lariso-package/balado-pedas.png"
                   loading="lazy"
-                  width="285"
-                  height="150"
-                  alt="sequence-vanilla-crumble"
-                  class="sequence-final-signature-img is-wiggle"
-                />
-              </div>
-              <div class="sequence-final-signature is-first-arrow">
-                <img
-                  src="assets/68bb4d0addb7dabb6793ee05_sequence-vanilla-crumble-arrow-038679.svg"
-                  loading="lazy"
-                  width="300"
-                  height="92"
-                  alt="sequence-vanilla-crumble-arrow"
-                  class="sequence-final-signature-img"
+                  width="771"
+                  height="1152"
+                  alt="Keripik Tempe Sagu Balado Pedas - Lariso"
+                  class="sequence-final-pack-mobile is-balado-mobile"
                 /><img
-                  src="assets/68bb4d0addb7dabb6793ee05_sequence-vanilla-crumble-arrow-038679.svg"
+                  src="assets/lariso-package/keju-gurih.png"
                   loading="lazy"
-                  width="300"
-                  height="92"
-                  alt="sequence-vanilla-crumble-arrow"
-                  class="sequence-final-signature-img is-wiggle"
-                />
-              </div>
-              <div
-                style="--animation-delay: 0.075s"
-                class="sequence-final-signature is-second"
-              >
-                <img
-                  src="assets/68bb4ef605d3c803020c0a8c_sequence-strawberry-cheesecake-95a0e4.svg"
-                  loading="lazy"
-                  width="300"
-                  height="125"
-                  alt="sequence-strawberry-cheesecake"
-                  class="sequence-final-signature-img"
-                /><img
-                  src="assets/68bb4ef605d3c803020c0a8c_sequence-strawberry-cheesecake-95a0e4.svg"
-                  loading="lazy"
-                  width="300"
-                  height="125"
-                  alt="sequence-strawberry-cheesecake"
-                  class="sequence-final-signature-img is-wiggle"
-                />
-              </div>
-              <div
-                style="--animation-delay: 0.025s"
-                class="sequence-final-signature is-second-arrow"
-              >
-                <img
-                  src="assets/68bb51400be6f0687f9cb522_sequence-strawberry-cheesecake-arrow-f14cec.svg"
-                  loading="lazy"
-                  width="153"
-                  height="150"
-                  alt="sequence-strawberry-cheesecake-arrow"
-                  class="sequence-final-signature-img"
-                /><img
-                  src="assets/68bb51400be6f0687f9cb522_sequence-strawberry-cheesecake-arrow-f14cec.svg"
-                  loading="lazy"
-                  width="153"
-                  height="150"
-                  alt="sequence-strawberry-cheesecake-arrow"
-                  class="sequence-final-signature-img is-wiggle"
+                  width="771"
+                  height="1152"
+                  alt="Keripik Tempe Sagu Keju Gurih - Lariso"
+                  class="sequence-final-pack-mobile is-keju-mobile"
                 />
               </div>
             </div>
